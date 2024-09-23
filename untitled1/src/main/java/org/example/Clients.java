@@ -3,7 +3,7 @@ package org.example;
 import java.time.LocalDate;
 
 public interface Clients  {
-    String addNewClient(String firstName, String lastName, LocalDate birthDate);
+    void addNewClient(String firstName, String lastName, LocalDate birthDate);
     int getNumberOfClients();
     boolean isClientPremium(int clientId);
     LocalDate getClientBirthdate(int clientId);

@@ -6,11 +6,11 @@ import java.util.ArrayList;
 public class ClientsImplementation implements Clients {
     ArrayList<Client> clientArrayList = new ArrayList<>();
     @Override
-    public String addNewClient(String firstName, String lastName, LocalDate birthDate) {
+    public void addNewClient(String firstName, String lastName, LocalDate birthDate) {
         Client client = new Client(firstName, lastName, birthDate);
         clientArrayList.add(client);
         client.setClientId(clientArrayList.indexOf(client));
-        return "Client added to list";
+        System.out.println("Client added to list");
     }
 
     @Override
